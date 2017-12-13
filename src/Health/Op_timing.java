@@ -1,6 +1,6 @@
 package Health;
 import java.util.*;
-public class Optiming {
+public class Op_timing extends Patient_details {
 	public void book(){
 		int c;
 		System.out.println("Book your op");
@@ -8,14 +8,19 @@ public class Optiming {
 		System.out.println("1.Yes 2.No");
 		Scanner sc=new Scanner(System.in);
 		c=sc.nextInt();
+		//Patient_details d=new Patient_details();
 		switch(c){
 		case 1:
 			int time;
 			System.out.println("enter your avaiable time atleast a hour matching with doctor op timing");
-			System.out.println("enter the time in railway time and in number format ex:11");
+			System.out.println("enter the time in railway time format");
+			sc.useDelimiter(":|\\s+");
 			time=sc.nextInt();
-			if(time>=9 && time<=16 ||time>=18 && time<=21){
-				System.out.println("Your op is confirmed at:"+time+":00");
+			int m = sc.nextInt();
+			if(time>=9 && time<=16 ||time>=18 && time<=20){
+				System.out.println("---------------OP Details are as follows----------------");
+				System.out.println("Your op is confirmed at:"+time+":"+m);
+               // d.patient_display();
 			}
 			else
 			{
