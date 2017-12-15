@@ -15,8 +15,9 @@ public class Patient {
 		Patient_details pd=new Patient_details();
 		pd.details();
 	
-		
+	//pd.update();
 		p.disease();
+		//pd.update();
 		pd.patient_display();
 		
 	}
